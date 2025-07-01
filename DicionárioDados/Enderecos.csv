@@ -1,0 +1,6 @@
+id_endereco,id_pessoa,logradouro,numero,bairro,cidade,estado,cep
+1,1,"Rua das Flores",123,"Centro","São Paulo","SP",01001000
+2,2,"Av. Paulista",1500,"Bela Vista","São Paulo","SP",01310200
+3,3,"Rua da Consolação",900,"Consolação","São Paulo","SP",01302000
+4,4,"Praça da Sé",10,"Centro","São Paulo","SP",01001001
+5,5,"Rua Augusta",2500,"Jardins","São Paulo","SP",01412100

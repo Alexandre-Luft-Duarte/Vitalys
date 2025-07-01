@@ -1,0 +1,6 @@
+id_atendimento,id_paciente,id_profissional,id_departamento,status_atendimento,data_hora
+1,2001,1001,10,"Finalizado",2025-06-10
+2,2002,1002,20,"Finalizado",2025-06-12
+3,2004,1003,40,"Agendado",2025-07-05
+4,2005,1004,30,"Em Andamento",2025-06-30
+5,2001,1001,10,"Internado",2025-06-20
