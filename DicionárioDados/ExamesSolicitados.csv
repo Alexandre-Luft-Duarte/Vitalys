@@ -1,0 +1,5 @@
+id_prescricoes,id_atendimento,id_medicamento,posologia
+1,1,505,"1 comprimido de 50mg a cada 12 horas por 30 dias."
+2,2,503,"1 comprimido de 400mg a cada 8 horas por 5 dias, se houver dor."
+3,5,501,"10ml via intravenosa a cada 6 horas."
+4,5,504,"500mg via oral a cada 8 horas por 7 dias."

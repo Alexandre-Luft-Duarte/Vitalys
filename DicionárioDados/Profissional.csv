@@ -1,0 +1,6 @@
+id_profissional,id_pessoa,id_departamento,id_especialidade,id_cargo,numero_conselho
+1001,3,10,101,1,12345
+1002,6,20,102,1,54321
+1003,9,40,104,1,67890
+1004,10,30,103,2,11223
+1005,7,20,105,3,33445
