@@ -55,7 +55,6 @@ O que é: A regra DEFAULT especifica um valor padrão para uma coluna. Se, ao in
 
 Como foi usada no código:
 
-
 CREATE TABLE Pessoa (
     ...
     status_ativo int2 DEFAULT 1
