@@ -1,0 +1,64 @@
+1. Chave Primária (PRIMARY KEY)
+O que é: É a regra que define um identificador único para cada registro em uma tabela. Ela não permite valores nulos nem duplicados, garantindo que cada linha possa ser localizada de forma inequívoca.
+
+Como foi usada no código:
+
+CREATE TABLE Pessoa (
+    id_pessoa int4 NOT NULL,
+    nome_completo varchar(255) NOT NULL,
+    ...
+    PRIMARY KEY (id_pessoa)
+);
+
+Explicação: Na tabela Pessoa, a coluna id_pessoa foi definida como a chave primária. Isso significa que não podem existir duas pessoas com o mesmo id_pessoa, e este campo é o identificador principal de um indivíduo no banco de dados. A mesma lógica foi aplicada em todas as outras tabelas, como id_atendimento na tabela Atendimento e id_cargo na tabela Cargo.
+
+2. Chave Estrangeira (FOREIGN KEY)
+O que é: Esta regra cria um vínculo entre duas tabelas, garantindo a integridade referencial. Ela exige que o valor em uma coluna de uma tabela corresponda a um valor existente na chave primária de outra tabela.
+
+Como foi usada no código:
+
+ALTER TABLE Atendimento 
+ADD CONSTRAINT FKAtendiment759047 
+FOREIGN KEY (id_paciente) REFERENCES Paciente (id_paciente);
+
+Explicação: Este comando garante que um registro na tabela Atendimento só possa ser criado se o id_paciente informado já existir na tabela Paciente. Isso impede a existência de "atendimentos órfãos" para pacientes que não estão cadastrados, mantendo a consistência do sistema. Várias outras chaves estrangeiras foram criadas, como a que liga Atendimento a Profissional e Profissional a Departamento.
+
+3. Não Nulo (NOT NULL)
+O que é: É uma regra que obriga que uma coluna tenha um valor. Ela não pode ser deixada em branco (nula) durante a inserção ou atualização de um registro.
+
+Como foi usada no código:
+
+CREATE TABLE Pessoa (
+    ...
+    nome_completo varchar(255) NOT NULL,
+    data_nascimento date NOT NULL,
+    cpf varchar(11) NOT NULL UNIQUE
+    ...
+);
+Explicação: Na tabela Pessoa, campos essenciais como nome_completo, data_nascimento e cpf foram marcados como NOT NULL. Isso força o preenchimento dessas informações no momento do cadastro, garantindo que não haverá pessoas sem nome ou documentos no banco de dados.
+
+4. Único (UNIQUE)
+O que é: Esta regra assegura que todos os valores em uma determinada coluna (ou conjunto de colunas) sejam diferentes uns dos outros, evitando a duplicidade de informações.
+
+Como foi usada no código:
+
+CREATE TABLE Pessoa (
+    ...
+    cpf varchar(11) NOT NULL UNIQUE,
+    email varchar(255) NOT NULL UNIQUE
+    ...
+);
+Explicação: Ao aplicar a restrição UNIQUE nas colunas cpf e email da tabela Pessoa, o banco de dados passa a proibir o cadastro de mais de uma pessoa com o mesmo CPF ou com o mesmo endereço de e-mail. Isso é fundamental para manter a unicidade dos registros de indivíduos.
+
+5. Padrão (DEFAULT)
+O que é: A regra DEFAULT especifica um valor padrão para uma coluna. Se, ao inserir um novo registro, nenhum valor for fornecido para essa coluna, o banco de dados utilizará automaticamente o valor padrão definido.
+
+Como foi usada no código:
+
+
+CREATE TABLE Pessoa (
+    ...
+    status_ativo int2 DEFAULT 1
+    ...
+);
+Explicação: Na tabela Pessoa, a coluna status_ativo recebeu um valor padrão de 1. Isso significa que, se um novo registro de pessoa for inserido sem especificar seu status, o sistema assumirá automaticamente que ela está "ativa" (status = 1), simplificando o processo de cadastro.
