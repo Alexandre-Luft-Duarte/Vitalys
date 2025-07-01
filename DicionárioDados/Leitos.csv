@@ -1,0 +1,6 @@
+id_numero_leito,id_departamento,status
+"UTI-01",60,"Ocupado"
+"UTI-02",60,"Disponível"
+"CARDIO-101",10,"Ocupado"
+"ORTO-201",20,"Disponível"
+"PED-301",30,"Manutenção"

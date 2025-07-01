@@ -1,0 +1,4 @@
+id_historico,id_internacao,id_numero_leito,data_inicio,data_fim
+1,1,"CARDIO-101",2025-06-20,2025-06-25
+2,1,"UTI-01",2025-06-25,9999-12-31
+3,2,"ORTO-201",2025-06-12,2025-06-14
