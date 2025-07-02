@@ -73,6 +73,8 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
 
 * **Implementação:** Scripts SQL para a criação do banco, tabelas, índices e regras de integridade.
 
+    ```
+
     A estrutura de pastas para os scripts de criação é:
     ```plaintext
     Vitalys/
@@ -80,6 +82,24 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
         ├── Scripts.sql              # Script com a criação do banco, tabelas e índices
         └── Constraints.sql          # Script com a definição das constraints (chaves primárias, estrangeiras, etc.)
     ```
+* Exemplo de sctipt para a criação de tabela:
+
+```sql
+    CREATE TABLE Pessoa (
+        id_pessoa int4 NOT NULL,
+        nome_completo varchar(255) NOT NULL,
+        data_nascimento date NOT NULL,
+        cpf varchar(11) NOT NULL UNIQUE,
+        email varchar(255) NOT NULL UNIQUE,
+        status_ativo int2 DEFAULT 1,
+        PRIMARY KEY (id_pessoa)
+    );
+
+Neste script, foram utilizadas as seguintes constraints para garantir a integridade e a qualidade dos dados:
+    * **`PRIMARY KEY`**: Define uma coluna que identifica unicamente cada registro em uma tabela, garantindo unicidade.
+    * **`FOREIGN KEY`**: Estabelece um vínculo entre dados em duas tabelas (os dados em uma tabela devem corresponder aos dados em outra).
+    * **`NOT NULL`**: Garante que uma coluna não possa conter valores nulos, exigindo que um valor seja sempre inserido.
+    * **`UNIQUE`**: Assegura que todos os valores em uma coluna sejam diferentes uns dos outros, evitando duplicidade de informações específicas.
 
 * **Consultas e Relatórios:** Scripts para extração de informações essenciais para análise e gestão hospitalar.
 
