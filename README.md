@@ -54,11 +54,10 @@ Conheça os membros da equipe que desenvolveram este projeto:
 
 | Foto                                 | Nome                  |
 | :-----------------------------------: | :-------------------- |
-| ![Foto de Alexandre Luft Duarte](fotos/alexandre.jpg) | Alexandre Luft Duarte |
-| ![Foto de Ivan Lopes Nerilo](fotos/ivan.jpg)         | Ivan Lopes Nerilo     |
-| ![Foto de Rafael Gustavo Vivian](fotos/rafael.jpg) | Rafael Gustavo Vivian |
+| ![Foto de Alexandre Luft Duarte](fotos/alexandre.png) | Alexandre Luft Duarte |
+| ![Foto de Ivan Lopes Nerilo](fotos/ivan.png)         | Ivan Lopes Nerilo     |
+| ![Foto de Rafael Gustavo Vivian](fotos/rafael.png) | Rafael Gustavo Vivian |
 
-*Para adicionar as fotos, substitua `![Foto Alexandre]`, `![Foto Ivan]` e `![Foto Rafael]` por `![Alt text](caminho/para/sua/foto.jpg)`. Certifique-se de que o caminho da imagem esteja correto.*
 
 ---
 
