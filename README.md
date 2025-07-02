@@ -1,38 +1,69 @@
-Sistema de Gestão Hospitalar: Otimização de Processos Assistenciais
+# 🏥 Sistema de Gestão Hospitalar: Vitalys
 
-Desenvolvedores:
-Alexandre Luft Duarte, Ivan Lopes Nerilo, Rafael Gustavo Vivian
+Um sistema robusto de banco de dados projetado para modernizar e otimizar a administração e os processos assistenciais em hospitais. Desenvolvido como trabalho acadêmico para a disciplina de Banco de Dados.
 
-Resumo do Projeto:
-Este projeto desenvolve um Sistema de Gestão Hospitalar com o objetivo de modernizar e otimizar a administração e os processos assistenciais em hospitais. O sistema resolve o problema comum da fragmentação das informações, integrando dados de pacientes, atendimentos, profissionais e recursos em uma única plataforma. Isso permite que médicos, enfermeiros e gestores tenham acesso rápido e organizado a informações importantes, como histórico clínico dos pacientes, disponibilidade de leitos e desempenho dos departamentos, facilitando decisões mais rápidas e um atendimento mais eficiente e humanizado.
+---
 
-Principais Funcionalidades:
+## 🎯 Objetivo
 
-Cadastro completo de pacientes, contatos e endereços: Centraliza todas as informações pessoais e de contato dos pacientes, garantindo que a equipe médica possa acessar facilmente dados essenciais para o atendimento.
+Nosso principal objetivo é resolver o problema comum da fragmentação das informações em ambientes hospitalares, integrando dados de pacientes, atendimentos, profissionais e recursos em uma única plataforma.
 
-Gestão de profissionais, cargos, especialidades, departamentos e leitos: Permite organizar a equipe de saúde, controlar escalas e alocar recursos humanos e físicos de forma eficiente.
+Com este sistema, buscamos garantir:
 
-Registro detalhado de atendimentos e internações: Mantém um histórico completo e cronológico dos atendimentos realizados, possibilitando a continuidade do cuidado e o acompanhamento detalhado do paciente durante sua internação.
+* **Acesso Rápido e Organizado**: Médicos, enfermeiros e gestores terão acesso facilitado a informações cruciais como histórico clínico, disponibilidade de leitos e desempenho de departamentos.
+* **Decisões Ágeis**: Facilitar a tomada de decisões rápidas e embasadas.
+* **Atendimento Eficiente e Humanizado**: Promover um cuidado mais integrado e de qualidade para os pacientes.
 
-Controle do histórico clínico, prescrições e exames: Integra informações sobre exames solicitados, resultados, medicamentos prescritos e anotações médicas, garantindo segurança no tratamento e evitando erros de medicação.
+---
 
-Geração de relatórios estratégicos: Transforma dados coletados em informações úteis para a gestão hospitalar, auxiliando na identificação de demandas, monitoramento da produtividade e na tomada de decisões para melhorar processos e otimizar recursos.
+## ✨ Funcionalidades
 
-Tecnologias Utilizadas:
+| Módulo                         | Descrição                                                                                                                                                                                                                                                                                                  |
+| :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cadastros Essenciais** | Centraliza informações de pacientes (completo, contatos e endereços), profissionais (cargos, especialidades), departamentos e gestão de leitos. Permite a organização da equipe e alocação eficiente de recursos humanos e físicos.                                                                        |
+| **Atendimentos e Internações** | Registra de forma detalhada e cronológica todos os atendimentos e internações, garantindo a continuidade do cuidado e o acompanhamento detalhado do paciente durante sua permanência hospitalar.                                                                                                            |
+| **Histórico Clínico Integrado** | Consolida informações sobre exames solicitados, resultados, medicamentos prescritos e anotações médicas. Essencial para a segurança no tratamento, evitando erros de medicação e proporcionando uma visão completa da jornada do paciente.                                                                   |
+| **Relatórios Estratégicos** | Transforma dados coletados em informações acionáveis para a gestão hospitalar. Auxilia na identificação de demandas, monitoramento da produtividade e na tomada de decisões estratégicas para melhoria de processos e otimização de recursos.                                                               |
 
-Modelagem: Visual Paradigm foi utilizado para criar diagramas que representam a estrutura do banco de dados e seus relacionamentos, facilitando o entendimento do sistema.
+---
 
-Desenvolvimento: VS Code é o ambiente principal para escrever os scripts SQL que implementam o banco de dados e as consultas.
+## 💻 Tecnologias Utilizadas
 
-Banco de Dados: PostgreSQL foi escolhido por ser um sistema robusto, seguro e eficiente, ideal para o armazenamento e manipulação dos dados hospitalares.
+Este projeto foi construído com as seguintes tecnologias e ferramentas:
 
-Estrutura do Projeto:
+* **Banco de Dados:** **PostgreSQL** (para armazenamento e manipulação de dados).
+* **Modelagem de Dados:** **Visual Paradigm** (para diagramas ER e design do banco).
+* **Desenvolvimento:** **VS Code (Visual Studio Code)** (para escrita de scripts SQL).
+* **Gerenciamento de Banco de Dados:** **DBeaver** (para administração e exploração do banco).
 
-Modelagem: Diagramas e dicionários de dados que definem claramente as tabelas e suas relações.
+---
 
-Implementação: Scripts SQL para criar o banco, tabelas, índices e regras que garantem a integridade dos dados.
+## 🏗️ Estrutura do Projeto
 
-Consultas e Relatórios: Scripts que extraem informações essenciais para a análise e gestão hospitalar, como dados de pacientes ativos, histórico de atendimentos, volume de trabalho dos profissionais e resumo por departamentos.
+A organização do projeto segue uma estrutura clara para facilitar o entendimento e a manutenção:
 
-Conclusão:
-Este Sistema de Gestão Hospitalar oferece uma solução integrada e eficiente para instituições de saúde que buscam aprimorar a organização, a comunicação e a qualidade do atendimento aos pacientes. Ao centralizar e estruturar informações críticas em um único sistema, ele facilita o trabalho da equipe médica e administrativa, promove a segurança nos tratamentos e apoia a gestão na tomada de decisões estratégicas. Com isso, o sistema contribui diretamente para a melhoria dos processos assistenciais e para um cuidado mais ágil, preciso e humanizado.
+* **Modelagem:** Diagramas e dicionários de dados que definem as tabelas e suas relações.
+* **Implementação:** Scripts SQL para a criação do banco, tabelas, índices e regras de integridade.
+* **Consultas e Relatórios:** Scripts para extração de informações essenciais para análise e gestão hospitalar.
+
+---
+
+## 👥 Equipe
+
+Conheça os membros da equipe que desenvolveram este projeto:
+
+| Foto                                 | Nome                  |
+| :-----------------------------------: | :-------------------- |
+| ![Foto de Alexandre Luft Duarte](fotos/alexandre.jpg) | Alexandre Luft Duarte |
+| ![Foto de Ivan Lopes Nerilo](fotos/ivan.jpg)         | Ivan Lopes Nerilo     |
+| ![Foto de Rafael Gustavo Vivian](fotos/rafael.jpg) | Rafael Gustavo Vivian |
+
+*Para adicionar as fotos, substitua `![Foto Alexandre]`, `![Foto Ivan]` e `![Foto Rafael]` por `![Alt text](caminho/para/sua/foto.jpg)`. Certifique-se de que o caminho da imagem esteja correto.*
+
+---
+
+## 📝 Conclusão
+
+Este Sistema de Gestão Hospitalar oferece uma solução integrada e eficiente para instituições de saúde que buscam aprimorar a organização, a comunicação e a qualidade do atendimento aos pacientes. Ao centralizar e estruturar informações críticas, ele facilita o trabalho da equipe médica e administrativa, promove a segurança nos tratamentos e apoia a gestão na tomada de decisões estratégicas, contribuindo para um cuidado mais ágil, preciso e humanizado.
+
+---
