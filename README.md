@@ -122,6 +122,20 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
                 └── resposta.csv         # Resposta da consulta
     ```
 
+    As principais consultas e relatórios desenvolvidos incluem:
+
+    * **Relatório de Pacientes Ativos:**
+        Fornece uma visão clara dos pacientes que possuem um cadastro ativo no sistema. Este relatório permite listar o nome completo, a data de nascimento e o telefone dos pacientes.
+
+    * **Relatório de Atendimentos de um Paciente:**
+        Detalha a data e a hora de cada atendimento, o departamento onde o paciente foi atendido e o profissional de saúde responsável. Este relatório é ordenado para exibir os atendimentos mais recentes primeiro.
+
+    * **Relatório de Atendimentos por Profissional de Saúde:**
+        Traz uma visão detalhada dos atendimentos realizados pelos profissionais de saúde no último mês. Exibe o nome do profissional, o número identificador do atendimento, o nome do paciente e a data e hora do atendimento. A organização é feita primeiro pelo nome do profissional e, em seguida, pela data do atendimento.
+
+    * **Relatório Resumido de Atendimentos por Departamento:**
+        O objetivo é mostrar cada departamento ou unidade e o total de seus atendimentos por um período específico de tempo, além de quantos profissionais distintos atuaram nesse departamento. Ele é ordenado de forma a exibir os departamentos com maior volume de atendimento.
+
 ---
 
 ## 👥 Equipe
