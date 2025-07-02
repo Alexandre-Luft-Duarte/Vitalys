@@ -86,10 +86,10 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
     );
     ```
     Neste script, foram utilizadas as seguintes constraints para garantir a integridade e a qualidade dos dados:
-    * **`PRIMARY KEY`**: Define uma coluna ou conjunto de colunas que identifica unicamente cada registro em uma tabela, garantindo unicidade e não-nulidade.
-    * **`FOREIGN KEY`**: Estabelece um vínculo entre dados em duas tabelas, garantindo a integridade referencial (os dados em uma tabela devem corresponder aos dados em outra).
+    * **`PRIMARY KEY`**: Define uma coluna que identifica unicamente cada registro em uma tabela.
+    * **`FOREIGN KEY`**: Estabelece um vínculo entre dados em duas tabelas(os dados em uma tabela devem corresponder aos dados em outra).
     * **`NOT NULL`**: Garante que uma coluna não possa conter valores nulos, exigindo que um valor seja sempre inserido.
-    * **`UNIQUE`**: Assegura que todos os valores em uma coluna (ou um grupo de colunas) sejam diferentes uns dos outros, evitando duplicidade de informações específicas.
+    * **`UNIQUE`**: Assegura que todos os valores em uma coluna sejam diferentes uns dos outros, evitando duplicidade de informações específicas.
 
     A estrutura de pastas para os scripts de criação é:
     ```plaintext
