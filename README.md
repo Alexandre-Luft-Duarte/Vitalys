@@ -44,7 +44,7 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
 
 * **Modelagem:** Diagramas e dicionários de dados que definem as tabelas e suas relações. O diagrama abaixo representa o modelo relacional do banco de dados Vitalys.
 
-    ![Modelo Relacional do Banco de Dados Vitalys](fotos/diagrama.png)
+    ![Modelo Relacional do Banco de Dados Vitalys](DiagramaRelacional/diagrama.png)
 
     A estrutura de pastas para a modelagem é a seguinte:
     ```plaintext
