@@ -18,12 +18,12 @@ Com este sistema, buscamos garantir:
 
 ## ✨ Funcionalidades
 
-| Módulo                         | Descrição                                                                                                                                                                                                                                                                                                  |
+| Módulo                         | Descrição                                                                                                                                                                                                                                                                                                  |
 | :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Cadastros Essenciais** | Centraliza informações de pacientes (completo, contatos e endereços), profissionais (cargos, especialidades), departamentos e gestão de leitos. Permite a organização da equipe e alocação eficiente de recursos humanos e físicos.                                                                        |
-| **Atendimentos e Internações** | Registra de forma detalhada e cronológica todos os atendimentos e internações, garantindo a continuidade do cuidado e o acompanhamento detalhado do paciente durante sua permanência hospitalar.                                                                                                            |
-| **Histórico Clínico Integrado** | Consolida informações sobre exames solicitados, resultados, medicamentos prescritos e anotações médicas. Essencial para a segurança no tratamento, evitando erros de medicação e proporcionando uma visão completa da jornada do paciente.                                                                   |
-| **Relatórios Estratégicos** | Transforma dados coletados em informações acionáveis para a gestão hospitalar. Auxilia na identificação de demandas, monitoramento da produtividade e na tomada de decisões estratégicas para melhoria de processos e otimização de recursos.                                                               |
+| **Cadastros Essenciais** | Centraliza informações de pacientes (completo, contatos e endereços), profissionais (cargos, especialidades), departamentos e gestão de leitos. Permite a organização da equipe e alocação eficiente de recursos humanos e físicos.                                                                        |
+| **Atendimentos e Internações** | Registra de forma detalhada e cronológica todos os atendimentos e internações, garantindo a continuidade do cuidado e o acompanhamento detalhado do paciente durante sua permanência hospitalar.                                                                                                            |
+| **Histórico Clínico Integrado** | Consolida informações sobre exames solicitados, resultados, medicamentos prescritos e anotações médicas. Essencial para a segurança no tratamento, evitando erros de medicação e proporcionando uma visão completa da jornada do paciente.                                                                   |
+| **Relatórios Estratégicos** | Transforma dados coletados em informações acionáveis para a gestão hospitalar. Auxilia na identificação de demandas, monitoramento da produtividade e na tomada de decisões estratégicas para melhoria de processos e otimização de recursos.                                                               |
 
 ---
 
@@ -50,41 +50,31 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
     ```plaintext
     Vitalys/
     ├── DiagramaRelacional/
-    │   ├── Vitalys.vpp              # Arquivo editável do Visual Paradigm
-    │   └── diagrama.png             # Imagem do modelo relacional exportada
+    │   ├── Vitalys.vpp              # Arquivo editável do Visual Paradigm
+    │   └── diagrama.png             # Imagem do modelo relacional exportada
     │
     └── DicionarioDados/
-        ├── Atendimento.csv
-        ├── Cargo.csv
-        ├── Contatos.csv
-        ├── Departamento.csv
-        ├── Endereco.csv
-        ├── Especialidade.csv
-        ├── Exame_Solicitado.csv
-        ├── Historico_Ocupacao.csv
-        ├── Internacao.csv
-        ├── Leito.csv
-        ├── Medicamento.csv
-        ├── Paciente.csv
-        ├── Pessoa.csv
-        ├── Prescricoes.csv
-        └── Profissional.csv
+        ├── Atendimento.csv
+        ├── Cargo.csv
+        ├── Contatos.csv
+        ├── Departamento.csv
+        ├── Endereco.csv
+        ├── Especialidade.csv
+        ├── Exame_Solicitado.csv
+        ├── Historico_Ocupacao.csv
+        ├── Internacao.csv
+        ├── Leito.csv
+        ├── Medicamento.csv
+        ├── Paciente.csv
+        ├── Pessoa.csv
+        ├── Prescricoes.csv
+        └── Profissional.csv
     ```
 
 * **Implementação:** Scripts SQL para a criação do banco, tabelas, índices e regras de integridade.
+    Abaixo, um exemplo de script para criação de tabela:
 
-    ```
-
-    A estrutura de pastas para os scripts de criação é:
-    ```plaintext
-    Vitalys/
-    └── ScriptsCriacao/
-        ├── Scripts.sql              # Script com a criação do banco, tabelas e índices
-        └── Constraints.sql          # Script com a definição das constraints (chaves primárias, estrangeiras, etc.)
-    ```
-* Exemplo de sctipt para a criação de tabela:
-
-```sql
+    ```sql
     CREATE TABLE Pessoa (
         id_pessoa int4 NOT NULL,
         nome_completo varchar(255) NOT NULL,
@@ -94,12 +84,20 @@ A organização do projeto segue uma estrutura clara para facilitar o entendimen
         status_ativo int2 DEFAULT 1,
         PRIMARY KEY (id_pessoa)
     );
-
-Neste script, foram utilizadas as seguintes constraints para garantir a integridade e a qualidade dos dados:
-    * **`PRIMARY KEY`**: Define uma coluna que identifica unicamente cada registro em uma tabela, garantindo unicidade.
-    * **`FOREIGN KEY`**: Estabelece um vínculo entre dados em duas tabelas (os dados em uma tabela devem corresponder aos dados em outra).
+    ```
+    Neste script, foram utilizadas as seguintes constraints para garantir a integridade e a qualidade dos dados:
+    * **`PRIMARY KEY`**: Define uma coluna ou conjunto de colunas que identifica unicamente cada registro em uma tabela, garantindo unicidade e não-nulidade.
+    * **`FOREIGN KEY`**: Estabelece um vínculo entre dados em duas tabelas, garantindo a integridade referencial (os dados em uma tabela devem corresponder aos dados em outra).
     * **`NOT NULL`**: Garante que uma coluna não possa conter valores nulos, exigindo que um valor seja sempre inserido.
-    * **`UNIQUE`**: Assegura que todos os valores em uma coluna sejam diferentes uns dos outros, evitando duplicidade de informações específicas.
+    * **`UNIQUE`**: Assegura que todos os valores em uma coluna (ou um grupo de colunas) sejam diferentes uns dos outros, evitando duplicidade de informações específicas.
+
+    A estrutura de pastas para os scripts de criação é:
+    ```plaintext
+    Vitalys/
+    └── ScriptsCriacao/
+        ├── Scripts.sql              # Script com a criação do banco, tabelas e índices
+        └── Constraints.sql          # Script com a definição das constraints (chaves primárias, estrangeiras, etc.)
+    ```
 
 * **Consultas e Relatórios:** Scripts para extração de informações essenciais para análise e gestão hospitalar.
 
@@ -107,21 +105,21 @@ Neste script, foram utilizadas as seguintes constraints para garantir a integrid
     ```plaintext
     Vitalys/
     └── Consultas/
-        ├── Consulta1 - Relatório de Pacientes Ativos/
-        │   ├── consulta.sql         # Script para extrair o relatório
-        │   └── resposta.csv         # Resposta da consulta
-        │
-        ├── Consulta 2 - Relatório de Atendimentos de um Paciente/
-        │   ├── consulta.sql         # Script para extrair o relatório
-        │   └── resposta.csv         # Resposta da consulta
-        │
-        ├── Consulta 3 - Relatório de Atendimentos por Profissional de Saúde/
-        │   ├── consulta.sql         # Script para extrair o relatório
-        │   └── resposta.csv         # Resposta da consulta
-        │
-        └── Consulta 4 - Relatório Resumido de Atendimentos por Departamento/
-            ├── consulta.sql         # Script para extrair o relatório
-            └── resposta.csv         # Resposta da consulta
+        ├── Consulta1 - Relatório de Pacientes Ativos/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        ├── Consulta 2 - Relatório de Atendimentos de um Paciente/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        ├── Consulta 3 - Relatório de Atendimentos por Profissional de Saúde/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        └── Consulta 4 - Relatório Resumido de Atendimentos por Departamento/
+                ├── consulta.sql         # Script para extrair o relatório
+                └── resposta.csv         # Resposta da consulta
     ```
 
 ---
@@ -130,12 +128,11 @@ Neste script, foram utilizadas as seguintes constraints para garantir a integrid
 
 Conheça os membros da equipe que desenvolveram este projeto:
 
-| Foto                                 | Nome                  |
+| Foto                                 | Nome                  |
 | :-----------------------------------: | :-------------------- |
 | ![Foto de Alexandre Luft Duarte](fotos/alexandre.png) | Alexandre Luft Duarte |
-| ![Foto de Ivan Lopes Nerilo](fotos/ivan.png)         | Ivan Lopes Nerilo     |
+| ![Foto de Ivan Lopes Nerilo](fotos/ivan.png)         | Ivan Lopes Nerilo     |
 | ![Foto de Rafael Gustavo Vivian](fotos/rafael.png) | Rafael Gustavo Vivian |
-
 
 ---
 
