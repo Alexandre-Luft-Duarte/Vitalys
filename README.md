@@ -42,9 +42,67 @@ Este projeto foi construído com as seguintes tecnologias e ferramentas:
 
 A organização do projeto segue uma estrutura clara para facilitar o entendimento e a manutenção:
 
-* **Modelagem:** Diagramas e dicionários de dados que definem as tabelas e suas relações.
+* **Modelagem:** Diagramas e dicionários de dados que definem as tabelas e suas relações. O diagrama abaixo representa o modelo relacional do banco de dados Vitalys.
+
+    ![Modelo Relacional do Banco de Dados Vitalys](diagrama.png)
+
+    A estrutura de pastas para a modelagem é a seguinte:
+    ```plaintext
+    Vitalys/
+    ├── DiagramaRelacional/
+    │   ├── Vitalys.vpp              # Arquivo editável do Visual Paradigm
+    │   └── diagrama.png             # Imagem do modelo relacional exportada
+    │
+    └── DicionarioDados/
+        ├── Atendimento.csv
+        ├── Cargo.csv
+        ├── Contatos.csv
+        ├── Departamento.csv
+        ├── Endereco.csv
+        ├── Especialidade.csv
+        ├── Exame_Solicitado.csv
+        ├── Historico_Ocupacao.csv
+        ├── Internacao.csv
+        ├── Leito.csv
+        ├── Medicamento.csv
+        ├── Paciente.csv
+        ├── Pessoa.csv
+        ├── Prescricoes.csv
+        └── Profissional.csv
+    ```
+
 * **Implementação:** Scripts SQL para a criação do banco, tabelas, índices e regras de integridade.
+
+    A estrutura de pastas para os scripts de criação é:
+    ```plaintext
+    Vitalys/
+    └── ScriptsCriacao/
+        ├── Scripts.sql              # Script com a criação do banco, tabelas e índices
+        └── Constraints.sql          # Script com a definição das constraints (chaves primárias, estrangeiras, etc.)
+    ```
+
 * **Consultas e Relatórios:** Scripts para extração de informações essenciais para análise e gestão hospitalar.
+
+    A estrutura de pastas para as consultas e seus respectivos resultados é:
+    ```plaintext
+    Vitalys/
+    └── Consultas/
+        ├── Consulta1 - Relatório de Pacientes Ativos/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        ├── Consulta 2 - Relatório de Atendimentos de um Paciente/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        ├── Consulta 3 - Relatório de Atendimentos por Profissional de Saúde/
+        │   ├── consulta.sql         # Script para extrair o relatório
+        │   └── resposta.csv         # Resposta da consulta
+        │
+        └── Consulta 4 - Relatório Resumido de Atendimentos por Departamento/
+            ├── consulta.sql         # Script para extrair o relatório
+            └── resposta.csv         # Resposta da consulta
+    ```
 
 ---
 
